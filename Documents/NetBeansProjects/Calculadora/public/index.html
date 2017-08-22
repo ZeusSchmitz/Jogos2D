@@ -39,10 +39,10 @@
                         </td>	
                         <td></td>  			  
                         <td>
-                            <input type="button" name="btnMaisMenos" value="+/-" id="btn" onclick="botao("+-")">  				
+                            <input type="button" name="btnMaisMenos" value="+/-" id="btn" onclick="numEspec('+-')">  				
                         </td>	  			  
                         <td>
-                            <input type="button" name="btnPorc" value="%" id="btn" onclick="botao(value)">  				
+                            <input type="button" name="btnPorc" value="%" id="btn" onclick="numEspec('porc')">  				
                         </td>	
                     </tr>
 
@@ -92,7 +92,7 @@
                             <input type="button" name="btnPonto" value="." id="btn" onclick="botao(value)">  				
                         </td>	
                         <td colspan="3">
-                          <input type="button" name="btn" id="btn">  				
+                          <input type="button" name="btn" id="btn" disabled="disabled">  				
                         </td>
                         <td>
                             <input type="button" name="btnIgual" value="=" id="btn" onclick="calcula()">  				
