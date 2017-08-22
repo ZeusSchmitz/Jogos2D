@@ -30,7 +30,7 @@ function numEspec(fator)
     {
       if(fator === 'porc')
       {
-          document.getElementById('calc-result').value = eval((resultado/100));
+        document.getElementById('calc-result').value = eval((eval(resultado)/100));
       }
     }
 }
