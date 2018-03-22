@@ -1,20 +1,20 @@
 package atores.fundo;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input.Keys;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 
-public class NaveJog extends Actor
+public class NaveJogF2 extends Actor
 {
   Movimento pos = new Movimento();
   Texture naveJog;
   Sound somTiro = Gdx.audio.newSound(Gdx.files.internal("tiro.mp3"));
-  public NaveJog()
+  public NaveJogF2()
   {
-    this.naveJog = new Texture("Nave.png");
+    this.naveJog = new Texture("nave_fase2.png");
   }
 
   @Override
@@ -28,23 +28,23 @@ public class NaveJog extends Actor
   public void act(float delta)
   {
     super.act(delta); 
-    if (Gdx.input.isKeyPressed(Keys.UP))
+    if (Gdx.input.isKeyPressed(Input.Keys.UP))
     {
       setY(pos.sobeNave(naveJog, (int) getY()));
     }
-    if (Gdx.input.isKeyPressed(Keys.DOWN))
+    if (Gdx.input.isKeyPressed(Input.Keys.DOWN))
     {
       setY(pos.desceNave(naveJog, (int) getY()));
     }
-    if (Gdx.input.isKeyPressed(Keys.RIGHT))
+    if (Gdx.input.isKeyPressed(Input.Keys.RIGHT))
     {
       setX(pos.dirNave(naveJog, (int) getX()));
     }
-    if (Gdx.input.isKeyPressed(Keys.LEFT))
+    if (Gdx.input.isKeyPressed(Input.Keys.LEFT))
     {      
       setX(pos.esqNave(naveJog, (int) getX()));
     }
-    if (Gdx.input.isKeyJustPressed(Keys.SPACE))
+    if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE))
     {
       TiroJog tiroJog = new TiroJog();
       tiroJog.setX(this.getX()+ 75);
@@ -53,4 +53,5 @@ public class NaveJog extends Actor
       somTiro.play();
     }
   }
+  
 }

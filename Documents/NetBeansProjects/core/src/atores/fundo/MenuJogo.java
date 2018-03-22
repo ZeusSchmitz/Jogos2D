@@ -38,8 +38,8 @@ public class MenuJogo extends Actor
       {
         this.dispose();
         batch.draw(btnClickJogar, this.getX(), 175);
-        FundoFase1 fase1 = new FundoFase1();
-        NaveJog naveFase1 = new NaveJog();
+        FundoFase2 fase1 = new FundoFase2();
+        NaveJogF2 naveFase1 = new NaveJogF2();
         this.getStage().addActor(fase1);
         this.getStage().addActor(naveFase1);
       }

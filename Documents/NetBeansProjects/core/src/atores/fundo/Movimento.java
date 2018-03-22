@@ -6,7 +6,7 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 
 public class Movimento extends Actor
 {
-  NaveJog nave;
+  NaveJogF1 nave;
   private int posX;
   private int posY;
 

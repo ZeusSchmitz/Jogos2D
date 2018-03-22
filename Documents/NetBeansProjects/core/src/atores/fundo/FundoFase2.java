@@ -4,13 +4,13 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 
-public class FundoFase1 extends Actor
+public class FundoFase2 extends Actor
 {
-  Texture fase1;
+  Texture fase2;
 
-  public FundoFase1()
+  public FundoFase2()
   {
-    this.fase1 = new Texture("fase_1.jpg");
+    this.fase2 = new Texture("fase_2.jpg");
   }
 
 
@@ -18,6 +18,7 @@ public class FundoFase1 extends Actor
   public void draw(Batch batch, float parentAlpha)
   {
     super.draw(batch, parentAlpha); 
-    batch.draw(fase1, 0, 0);
-  }  
+    batch.draw(fase2, 0, 0);
+  }
+  
 }
