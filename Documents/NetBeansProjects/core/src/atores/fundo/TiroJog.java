@@ -1,28 +1,22 @@
-package com.mygdx.game;
+package atores.fundo;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 
-class TiroJog extends Actor
+public class TiroJog extends Actor
 {
   Texture tiroJog;
 
-  public TiroJog(Texture tiroJog)
+  public TiroJog()
   {
     this.tiroJog = new Texture("tiro.png");
-  }  
-
-  TiroJog()
-  {
-    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
   }
 
   @Override
   public void draw(Batch batch, float parentAlpha)
   {
-    super.draw(batch, parentAlpha);
-    
+    super.draw(batch, parentAlpha); 
     batch.draw(tiroJog, this.getX(), this.getY());
   }
 
@@ -31,5 +25,7 @@ class TiroJog extends Actor
   {
     super.act(delta); 
     this.setX(this.getX()+15);
+    if(this.getX()>=800)
+      tiroJog.dispose();
   }
 }
